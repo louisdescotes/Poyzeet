@@ -9,11 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "50": "#FAFAFA", 
+        "100": "#EFEFEF", 
+        "200": "#DCDCDC", 
+        "300": "#BDBDBD", 
+        "400": "#989898", 
+        "500": "#7C7C7C", 
+        "600": "#656565", 
+        "700": "#525252", 
+        "800": "#464646", 
+        "900": "#3D3D3D", 
+        "950": "#292929", 
+      },
+      backgroundImage: {
+        'gradientWhite': 'linear-gradient(90deg, #EFEFEF 0%, #DCDCDC 100%)',
+        'gradientBlack': 'linear-gradient(90deg, #3D3D3D 0%, #464646 100%)',
       },
     },
   },
   plugins: [],
 };
+
 export default config;

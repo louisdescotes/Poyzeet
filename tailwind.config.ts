@@ -24,6 +24,7 @@ const config: Config = {
       backgroundImage: {
         'gradientWhite': 'linear-gradient(90deg, #EFEFEF 0%, #DCDCDC 100%)',
         'gradientBlack': 'linear-gradient(90deg, #3D3D3D 0%, #464646 100%)',
+        'gradientMenu': 'linear-gradient(90deg, rgba(41, 41, 41, 0.80) 0%, rgba(61, 61, 61, 0.80) 100%)',
       },
     },
   },

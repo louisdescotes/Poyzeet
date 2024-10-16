@@ -15,6 +15,7 @@ const Satoshi = localFont({
 export const metadata: Metadata = {
   title: "Poyzeet",
   description: "Vinyl de bruit blanc",
+  icons: "/simpleBlackLogo.svg"
 };
 
 export default function RootLayout({

@@ -75,7 +75,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <section className="text-950 flex flex-col justify-center items-center gap-12 w-8/12 mx-auto h-full ">
+    <section className="text-950 flex flex-col justify-center items-center gap-12 w-8/12 mx-auto h-2/4 ">
       <nav className="flex items-center justify-between w-full gap-10">
         {carouselInformation.map((items, index) => {
           return (

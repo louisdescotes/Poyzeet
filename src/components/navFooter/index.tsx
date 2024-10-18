@@ -1,6 +1,6 @@
 export default function FooterSection() {
   return (
-    <div className="px-20 py-16 my-20 bg-950 w-full h-fit rounded-t-lg">
+    <div className="px-20 py-16 my-40 bg-950 w-full h-96 rounded-t-lg">
       <h2 className="title2 text-50">Poyzeet</h2>
       <nav className="flex flex-col text1 text-50">
         <a href="#index">Accueil</a>

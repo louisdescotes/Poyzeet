@@ -42,3 +42,18 @@
  line-height: 1.5rem;
  letter-spacing: 0.168px;
 }
+
+.landing {
+ background: url(/one.jpg) no-repeat ;
+ background-size: cover;
+}
+
+.preview {
+ background: url(/two.jpg) no-repeat ;
+ background-size: cover;
+}
+
+.calltobuy {
+ background: url(/three.jpg) no-repeat ;
+ background-size: cover;
+}

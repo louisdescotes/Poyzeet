@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Menu from "@/components/menu";
 
 const Satoshi = localFont({
   src: [
@@ -26,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${Satoshi.variable} antialiased bg-50`}>
-        <Menu />
         {children}</body>
     </html>
   );

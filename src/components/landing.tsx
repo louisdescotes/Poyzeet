@@ -1,7 +1,10 @@
 "use client";
 
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { useOpenMenu } from "@/store";
 import {
   OrthographicCamera,
   ScrollControls,
@@ -9,6 +12,7 @@ import {
   useScroll,
 } from "@react-three/drei";
 import { TextureLoader } from "three";
+import Header from "./nav/Header";
 
 const textArray = [
   "Index",
@@ -26,6 +30,13 @@ const textArray = [
 ];
 
 function ScrollText() {
+  // const model = useLoader(GLTFLoader, "/test.glb", (loader) => {
+  //   const dracoLoader = new DRACOLoader();
+  //   dracoLoader.setDecoderPath("/draco/");
+  //   loader.setDRACOLoader(dracoLoader);
+  // });
+
+
   const scroll = useScroll();
   const radius = 5;
 
@@ -90,10 +101,13 @@ export default function Landing() {
   };
 
   const texture = new TextureLoader().load("/gradientTexture.png");
+  const { isOpen } = useOpenMenu();
 
   return (
     <section className="landing w-full h-screen">
-      <Canvas className="bg-[#E1E1E1]">
+      <Header/>
+      {isOpen && (
+        <Canvas className="bg-[#E1E1E1]">
         <OrthographicCamera position={[0, 0, 0]} />
         <ScrollControls pages={2.95} damping={0.2} infinite>
           <ScrollText />
@@ -118,6 +132,8 @@ export default function Landing() {
           />
         </mesh>
       </Canvas>
+      )}
+      
     </section>
   );
 }

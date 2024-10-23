@@ -104,10 +104,10 @@ export default function Landing() {
   const { isOpen } = useOpenMenu();
 
   return (
-    <section className="landing w-full h-screen">
+    <section className="fixed top-0 left-0 w-full h-screen">
       <Header/>
       {isOpen && (
-        <Canvas className="bg-[#E1E1E1]">
+        <Canvas className="bg-[#E1E1E1] h-screen w-screen">
         <OrthographicCamera position={[0, 0, 0]} />
         <ScrollControls pages={2.95} damping={0.2} infinite>
           <ScrollText />
@@ -133,7 +133,6 @@ export default function Landing() {
         </mesh>
       </Canvas>
       )}
-      
     </section>
   );
 }

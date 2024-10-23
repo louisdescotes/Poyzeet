@@ -1,6 +1,7 @@
 import Landing from '@/components/landing'
 import Footer from '@/components/nav/Footer'
 import Header from '@/components/nav/Header'
+import Test from '@/components/test'
 
 export default function page() {
 
@@ -8,7 +9,8 @@ export default function page() {
     <section className=' image h-screen w-full'>
       <Header />
       <Landing />
-      <Footer />
+      <Test />
+      <Footer/>
     </section>
   )
 }

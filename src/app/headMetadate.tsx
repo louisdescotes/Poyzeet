@@ -1,11 +1,6 @@
-"use client";
-
 import Head from "next/head";
-import { useOpenMenu } from "@/store";
 
 export function HeadMetadata() {
-  const { isOpen } = useOpenMenu();
-
   return (
     <Head>
       <title>Poyzeet</title>

@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
+"use client"
+
 import localFont from "next/font/local";
 import "./globals.css";
+import { useOpenMenu } from "@/store";
+import { HeadMetadata } from "./headMetadate";
+
 
 const Satoshi = localFont({
   src: [
@@ -11,21 +15,19 @@ const Satoshi = localFont({
   variable: "--font-geist-sans",
 });
 
-export const metadata: Metadata = {
-  title: "Poyzeet",
-  description: "Vinyl de bruit blanc",
-  icons: "/simpleBlackLogo.svg"
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { isOpen } = useOpenMenu();
+
   return (
     <html lang="fr">
-      <body className={`${Satoshi.variable} antialiased bg-50`}>
-        {children}</body>
+      <HeadMetadata />
+      <body className={`${Satoshi.variable} antialiased bg-50 ${isOpen ? "overflow-hidden" : "overflow-auto"}`}>
+        {children}
+      </body>
     </html>
   );
 }

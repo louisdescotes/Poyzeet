@@ -6,6 +6,7 @@ import React, { useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { useOpenMenu } from "@/store";
 import {
+  OrbitControls,
   OrthographicCamera,
   ScrollControls,
   Text3D,
@@ -30,12 +31,13 @@ const textArray = [
 ];
 
 function ScrollText() {
-  // const model = useLoader(GLTFLoader, "/test.glb", (loader) => {
-  //   const dracoLoader = new DRACOLoader();
-  //   dracoLoader.setDecoderPath("/draco/");
-  //   loader.setDRACOLoader(dracoLoader);
-  // });
+  const model = useLoader(GLTFLoader, "/3D/untitled.glb", (loader) => {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("/draco/");
+    loader.setDRACOLoader(dracoLoader);
+  });
 
+  console.log(model)
 
   const scroll = useScroll();
   const radius = 5;
@@ -51,7 +53,7 @@ function ScrollText() {
     const offset = scroll.offset * 2 * Math.PI;
     const angle = angleIncrement + offset;
 
-    vinylRef.current.rotation.set(0, angle, 0);
+    vinylRef.current.rotation.set(angle, 0, - Math.PI /2);
 
     groupRefs.forEach((ref, index) => {
       const angle = index * angleIncrement + offset;
@@ -72,10 +74,11 @@ function ScrollText() {
           </Text3D>
         </group>
       ))}
-      <mesh ref={vinylRef} position={[-3, 0, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshBasicMaterial color="#9900FF" />
-      </mesh>
+      <directionalLight intensity={1} position={[10,-5,15]}/>
+      <group  rotation={[0, -Math.PI / 2, 0]} scale={1}>
+        <primitive ref={vinylRef}  object={model.nodes.Disque} position={[.3, -.4, 3.5]} />
+        <primitive object={model.scene} position={[.3, -2, 2.5]}/>
+      </group>
     </>
   );
 }
@@ -106,9 +109,10 @@ export default function Landing() {
   return (
     <section className="fixed top-0 left-0 w-full h-screen">
       <Header/>
-      {isOpen && (
+      {/* {isOpen && ( */}
         <Canvas className="bg-[#E1E1E1] h-screen w-screen">
         <OrthographicCamera position={[0, 0, 0]} />
+        {/* <OrbitControls /> */}
         <ScrollControls pages={2.95} damping={0.2} infinite>
           <ScrollText />
         </ScrollControls>
@@ -132,7 +136,7 @@ export default function Landing() {
           />
         </mesh>
       </Canvas>
-      )}
+      {/* )} */}
     </section>
   );
 }

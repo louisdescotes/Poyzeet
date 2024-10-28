@@ -9,7 +9,6 @@ export default function page() {
     <section className=" image h-screen w-full">
       <Header />
       <Landing />
-      <Test />
       <AdvantagesList
         number={1}
         title="Boostez votre concentration"

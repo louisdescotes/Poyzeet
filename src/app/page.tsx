@@ -2,10 +2,11 @@ import Landing from "@/components/landing";
 import Footer from "@/components/nav/Footer";
 import Header from "@/components/nav/Header";
 import AdvantagesList from "@/components/sections/advantages/advantagesList";
+import Description from "@/components/sections/description/Description";
 export default function page() {
   return (
-    <section className=" image h-screen w-full">
-      <Header />
+    <section className=" h-screen w-full">
+      {/* <Header />
       <Landing />
       <AdvantagesList
         number={1}
@@ -21,8 +22,9 @@ export default function page() {
         number={3}
         title="Trouvez le sommeil facilement"
         text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
-      />
-      <Footer />
+      /> */}
+      <Description />
+      {/* <Footer /> */}
     </section>
   );
 }

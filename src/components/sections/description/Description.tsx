@@ -32,7 +32,7 @@ export default function Description() {
     },
   };
   return (
-    <section className=" flex items-center w-screen h-screen bg-950 text-50">
+    <section className=" flex items-center w-full h-screen bg-950 text-50 overflow-hidden">
       <aside className="mx-10 w-3/4">
       <div className="max-w-3xl">
         <div className="mb-32">

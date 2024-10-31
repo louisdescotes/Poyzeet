@@ -6,7 +6,7 @@ import Description from "@/components/sections/description/Description";
 export default function page() {
   return (
     <section className=" h-screen w-full">
-      {/* <Header />
+      <Header />
       <Landing />
       <AdvantagesList
         number={1}
@@ -22,9 +22,9 @@ export default function page() {
         number={3}
         title="Trouvez le sommeil facilement"
         text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
-      /> */}
+      />
       <Description />
-      {/* <Footer /> */}
+      <Footer />
     </section>
   );
 }

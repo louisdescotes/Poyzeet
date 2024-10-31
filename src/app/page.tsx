@@ -23,6 +23,21 @@ export default function page() {
         title="Trouvez le sommeil facilement"
         text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
       />
+            <AdvantagesList
+        number={3}
+        title="Trouvez le sommeil facilement"
+        text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
+      />
+            <AdvantagesList
+        number={3}
+        title="Trouvez le sommeil facilement"
+        text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
+      />
+            <AdvantagesList
+        number={3}
+        title="Trouvez le sommeil facilement"
+        text="Dites adieu aux nuits agitées. Le bruit blanc crée un fond sonore stable qui masque les bruits gênants, facilitant ainsi l'endormissement et un sommeil plus profond."
+      />
       <Description />
       <Footer />
     </section>

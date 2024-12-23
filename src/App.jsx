@@ -1,3 +1,7 @@
+import Interface from "./pages/Interface";
+
 export default function App() {
-	return <div></div>;
+	return <>
+		<Interface />
+	</>;
 }

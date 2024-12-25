@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      color: {
+      colors: {
         50: "#FAFAFA",
         100: "#EFEFEF",
         200: "#DCDCDC",

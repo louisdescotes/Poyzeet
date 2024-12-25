@@ -61,10 +61,16 @@ body {
     font-weight: 500;
 }
 
+.bgLanding {
+    background: url("/test.jpeg") no-repeat;
+    background-size: 100% 100svh;
+    height: 100%;
+}
+
 h1 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 7.5em;
+    font-size: 4em;
     font-weight: 500;
     line-height: 1;
 }
@@ -72,7 +78,7 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 5em;
+    font-size: 3em;
     font-weight: 500;
     line-height: 1.05;
 }

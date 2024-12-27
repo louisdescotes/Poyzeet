@@ -1,0 +1,51 @@
+[
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Une expérience unique",
+        "subtitle": "Le son est incroyablement pur, et on sent vraiment la différence avec le numérique. C'est un plaisir de redécouvrir mes albums préférés sur vinyle !",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Très bonne qualité",
+        "subtitle": "Le disque est bien pressé, et la pochette est magnifique. Cependant, la livraison a pris un peu plus de temps que prévu.",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Un voyage dans le temps.",
+        "subtitle": "Écouter ce vinyle, c’est comme retourner dans les années 70. Le crépitement léger donne une touche nostalgique parfaite.",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Un bon achat",
+        "subtitle": "Les morceaux sont excellents, mais la qualité d’impression de la pochette pourrait être améliorée.",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Le top pour les puristes",
+        "subtitle": "Le son analogique est juste parfait. Le vinyle est épais, bien pressé, et le rendu est impeccable.",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Le vinyle parfait pour les amateurs",
+        "subtitle": "C’est devenu mon vinyle préféré. Une ambiance immersive et un son chaleureux.",
+        "number": "5"
+    },
+    {
+        "img": "",
+        "name": "John Doe",
+        "title": "Un must-have pour les collectionneurs",
+        "subtitle": "Chaque détail est soigné, du son jusqu’à l’esthétique. C’est un produit que je suis fier de montrer dans ma collection.",
+        "number": "5"
+    }
+]

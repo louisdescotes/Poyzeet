@@ -1,7 +1,9 @@
-import Interface from "./pages/Interface";
+import Nav from "./components/nav/index.jsx"
+import Scene from "./pages/Scene";
 
 export default function App() {
 	return <>
-		<Interface />
+		<Nav />
+		<Scene />
 	</>;
 }

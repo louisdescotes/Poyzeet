@@ -1,20 +1,18 @@
 import React from 'react'
-import Nav from '../components/nav'
 import Landing from '../components/landing'
 import Carousel from '../components/carousel'
+import Video from '../components/video'
 
 export default function Interface() {
   return (
-    <section className="container bgLanding is--full">
-      <Nav />
+    <section className="w-screen h-full bgLanding ">
       <Landing />
+      <Video />
+      <div className='h-screen' />
+      <div className='h-screen' />
       <Carousel />
-        <h1 className='font-euclid font-bold tracking-euclid'>POYZEET</h1>
-        <h2 className='font-satoshi font-bold tracking-satoshi'>POYZEET</h2>
-        <h3>POYZEET</h3>
-        <h4>POYZEET</h4>
-        <h5>POYZEET</h5>
-        <p>POYZEET</p>
+      <div className='h-screen bg-50' />
+      <div className='h-screen bg-950' />
     </section>
   )
 }

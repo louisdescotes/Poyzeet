@@ -23,6 +23,9 @@ export default {
         satoshi: ['Satoshi', 'sans-serif'],
         euclid: ['Euclid Circular B', 'sans-serif'], 
       },
+      rotate: {
+        135: '135deg',
+      },
     },
   },
   plugins: [],

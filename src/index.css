@@ -1,5 +1,4 @@
 @import './css/font.css';
-@import './css/container.css';
 
 @tailwind base;
 @tailwind components;
@@ -54,6 +53,10 @@
     }
 }
     
+#root {
+    height: 100svh;
+    width: 100%;
+}
 
 body {
     font-size: var(--size-font);
@@ -61,10 +64,24 @@ body {
     font-weight: 500;
 }
 
-.bgLanding {
-    background: url("/test.jpeg") no-repeat;
-    background-size: 100% 100svh;
+.bgBlackPadding::before {
+    content: '';
+    position: absolute;
+    width: var(--container-padding);
     height: 100%;
+    left: calc(-1 * var(--container-padding));
+    top: 0;
+    background: #101010;
+}
+
+.bgBlackPadding::after {
+    content: '';
+    position: absolute;
+    width: var(--container-padding);
+    height: 100%;
+    right: calc(-1 * var(--container-padding));
+    top: 0;
+    background: #101010;
 }
 
 h1 {

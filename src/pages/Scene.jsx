@@ -3,8 +3,30 @@ import { Html, Scroll, ScrollControls, useGLTF, useScroll } from "@react-three/d
 import Interface from "./Interface";
 import { Leva, useControls } from "leva";
 import { useState } from "react";
+import useMousePosition from "../utils/mousePosition";
 
 export default function Scene() {
+  const { x, y } = useMousePosition();
+  const width = window.innerWidth; 
+  const height = window.innerHeight;
+  
+  const normalizedX = x / width; 
+  const normalizedY = y / height; 
+  
+  const mappedX = normalizedX * (-4.5 - -5.5) + -5.5; 
+  const clampedX = Math.max(-5.5, Math.min(-4.5, mappedX));
+  
+  const mappedY = normalizedY * (6.5 - 4.5) + 4.5;  
+  const clampedY = Math.max(4.5, Math.min(6.5, mappedY)); 
+
+  const mappedX2 = normalizedX * (-4.0 - -6.0) + -6.0; 
+  const clampedX2 = Math.max(-5.0, Math.min(-4.0, mappedX2));
+  
+  const mappedY2 = normalizedY * (-5.2 - -6.2) + -6.2;  
+  const clampedY2 = Math.max(-6.2, Math.min(-5.2, mappedY2)); 
+  
+  console.log(clampedX, clampedY);
+
   const { positionY } = useControls("Model Position", {
     positionY: {
       value: 0,
@@ -43,7 +65,7 @@ export default function Scene() {
     const data = useScroll();
   
     useFrame(() => {
-      console.log("Scroll offset:", data.offset);
+      // console.log("Scroll offset:", data.offset);
     });
   
     return null;
@@ -75,18 +97,14 @@ export default function Scene() {
         <ScrollControls pages={6} damping={.1}>
           <Model/>
           <Scroll>
-            <directionalLight position={[-5.5, 10.0, -0.2]} intensity={2} />
-            <directionalLight position={[positionX, positionY, positionZ]} intensity={intensity}/>
+          <directionalLight position={[clampedX2, -clampedY2, 9.3]} intensity={2.4} />
+          <directionalLight position={[clampedX, -clampedY, 10.0]} intensity={0.8} />
           </Scroll>
           <Scroll html>
             <Interface />
           </Scroll>
         <ScrollWatcher />
         </ScrollControls>
-            <directionalLight position={[-4.0, -6.2, 9.3]} intensity={2.4} />
-        <directionalLight position={[0, 5.7, 10.0]} intensity={0.8} />
-
-
       </Canvas>
     </>
   );

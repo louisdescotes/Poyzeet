@@ -2,6 +2,7 @@ import React from 'react'
 import Landing from '../components/landing'
 import Carousel from '../components/carousel'
 import Video from '../components/video'
+import Footer from '../footer'
 
 export default function Interface() {
   return (
@@ -12,7 +13,7 @@ export default function Interface() {
       <div className='h-screen' />
       <Carousel />
       <div className='h-screen bg-50' />
-      <div className='h-screen bg-950' />
+      <Footer />
     </section>
   )
 }

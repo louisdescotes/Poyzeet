@@ -24,8 +24,8 @@ export default function Scene() {
   const clampedX2 = Math.max(-35, Math.min(5, mappedX2));
   
   const mappedY2 = normalizedY * (100 - 150) + 150;  
-  const clampedY2 = Math.max(100, Math.min(150, mappedY2));  
-  
+  const clampedY2 = Math.max(100, Math.min(150, mappedY2));
+
   const { positionX } = useControls("Model Position", {
     positionX: {
       value: 0,
@@ -114,10 +114,11 @@ export default function Scene() {
             <directionalLight position={[clampedX2, clampedY2, 150]} intensity={.9} color={"#BDBDBD"}/>
             <directionalLight position={[21.4, 33.3, 30.8]} intensity={.5} color={"#BDBDBD"} /> 
             
-            <directionalLight position={[9.8, -11.6, 1.0]} intensity={1.0} />
+            <directionalLight position={[9.8, -11.6, 1.0]} intensity={1.5} />
             <directionalLight position={[80, -40.0, -9.7]} intensity={.6} />
             <directionalLight position={[-20.0, 80.8, -65.7]} intensity={.5} />
-            {/* <directionalLight position={[positionX, positionY, positionZ]} intensity={intensity} color={"#BDBDBD"} />  */}
+
+            <directionalLight position={[-39.6, -11.4, 150.0]} intensity={1.3} color={"#BFC6CC"} /> 
           </Scroll>
           <Scroll html>
             <Interface />

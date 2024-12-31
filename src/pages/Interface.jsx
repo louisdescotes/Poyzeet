@@ -3,6 +3,7 @@ import Landing from '../components/landing'
 import Video from '../components/video'
 import Footer from '../footer'
 import Carousel from '../components/carousel'
+import NewsLetter from '../components/newletter'
 
 export default function Interface() {
   return (
@@ -11,7 +12,7 @@ export default function Interface() {
       <Video />
       <div className='h-screen' />
       <Carousel />
-      <div className='h-screen bg-50' />
+      <NewsLetter />
       <Footer />
     </section>
   )

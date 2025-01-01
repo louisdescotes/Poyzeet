@@ -17,7 +17,7 @@ export default {
         700: "#525252",
         800: "#464646",
         900: "#3D3D3D",
-        950: "#292929",
+        950: "#101010",
       },
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],

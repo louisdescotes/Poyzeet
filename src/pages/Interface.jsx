@@ -7,9 +7,10 @@ import NewsLetter from '../components/newletter'
 
 export default function Interface() {
   return (
-    <section className="w-screen h-full bgLanding ">
+    <section className="w-screen h-full ">
       <Landing />
       <Video />
+      <div className='h-screen' />
       <div className='h-screen' />
       <Carousel />
       <NewsLetter />

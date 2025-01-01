@@ -1,0 +1,12 @@
+.animation {
+    animation: slider 3s ease;
+}
+
+@keyframes slider {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

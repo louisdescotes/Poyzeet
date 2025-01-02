@@ -2,19 +2,22 @@ import { Canvas, useFrame, useLoader} from "@react-three/fiber";
 import { Scroll, ScrollControls, useGLTF, useScroll } from "@react-three/drei";
 import Interface from "./Interface";
 import { Leva, useControls } from "leva";
-import { TextureLoader } from "three";
-import { useState } from "react";
+import { DirectionalLightHelper, PointLightHelper, TextureLoader } from "three";
+import { useRef, useState } from "react";
 import Lights from "../components/SceneComponents/Lights";
-import useLevaControls from "../components/SceneComponents/LevaComponent";
 
 export default function Scene() {
-const controls = useControls("Model Position", {
+  const { positionX, positionY, positionZ, intensity } = useControls("Model Position", {
     positionX: { value: 0, min: -150, max: 150, step: 0.1 },
-    positionY: { value: 0, min: -150, max: 150, step: 0.1 },
+    positionY: { value: -35, min: -150, max: 150, step: 0.1 },
     positionZ: { value: 0, min: -150, max: 150, step: 0.1 },
     intensity: { value: 1, min: 0, max: 20, step: 0.1 },
   });
-  const [scrollPosition, setScrollPosition] = useState(controls.positionY);
+
+  const lightRef = useRef();
+
+
+  const [scrollPosition, setScrollPosition] = useState(positionY);
 
   const ScrollWatcher = () => {
     const data = useScroll();
@@ -63,16 +66,22 @@ const controls = useControls("Model Position", {
 
   return (
     <>
-      <Leva  /> 
+      <Leva /> 
 
       <Canvas className={scrollPosition === 42.1 ? "bg-950" : "bg-50"}>
       <ScrollControls pages={6} damping={.1}>
           <Model/>
           <ModelWithTextureChange />
           <Scroll>
-            <Lights />
+            <Lights /> 
+            <pointLight ref={lightRef} position={[positionX, positionY, positionZ]} intensity={intensity}/>
           </Scroll>
           <Scroll html>
+          {lightRef.current && (
+                    <primitive
+                        object={new PointLightHelper(lightRef.current, 6, "red")}
+                    />
+                )}
             <Interface />
           </Scroll>
           {/* <ScrollWatcher /> */}
